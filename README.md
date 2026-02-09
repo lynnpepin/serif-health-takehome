@@ -8,8 +8,22 @@ This project is implemented in a [*Jupyter Notebook*](https://jupyter.org/), whi
 
 Without further ado, to run this on your machine:
 
+To **open the Jupyter notebook**:
+
 ```sh
-# todo
+uv sync
+uv run --with jupyter jupyter lab
+```
+
+There are two Jupyter notebooks, `main_rough_draft.ipynb` which contains stream-of-consciousness iterative development, and `main.ipynb` which is the nearly-completed script
+
+To **run the `main.py`**:
+
+```sh
+gzip -c -d 2026-02-01_anthem_index.json.gz > anthem_index.json
+# this is unzipped as part of the ipynb 
+uv sync
+uv run main.py
 ```
 
 ---
@@ -33,6 +47,10 @@ Before starting the actual development, I wrote some of this README first thing 
 - ~13:45 ET - Set a timer, started development of solution.
 
     - I like to write and be verbose, so I'm writing my thoughts out a *lot* using the 2h max.
+
+- ~15:40 ET - `main.ipynb` notebook running. It finishes in 405 seconds
+
+I paused the timer for ~15 minutes for a coffee break :)
 
 ---
 
@@ -62,6 +80,14 @@ This is increasingly muddled as DuckDuckGo and others surface LLM-generated resp
 
 In the interest of transparency, I'll provide the transcription of my LLM of choice, which is currently ChatGPT for no particular reason.
 
-(todo - anticipated content)
+The transcript is here: https://chatgpt.com/share/698a4753-08e0-8002-8594-64de9cc16784
 
 
+
+# Development notes
+
+Writing this while the notebook runs:
+
+1. I feel uncertain about my inclusion principle for what URLs do or do not correspond to Anthem PPO. Most of my healthcare experience is working with PHI data and internal contracting. If I had more time, I'd re-assess
+
+2. I do feel confident that my general
