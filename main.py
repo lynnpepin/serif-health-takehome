@@ -81,9 +81,13 @@ def main():
     
     end = time.time()
     with open("url_list.txt", "w") as ff:
-        ff.writelines(url_list)
+        for url in url_list:
+            ff.write(url)
+            ff.write("\n")
     with open("url_set.txt", "w") as ff:
-        ff.writelines(list(url_set))
+        for url in url_set:
+            ff.write(url)
+            ff.write("\n")        
     print(f"Done in {round(end-start)} seconds")
 
 

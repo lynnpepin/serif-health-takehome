@@ -50,7 +50,9 @@ Before starting the actual development, I wrote some of this README first thing 
 
 - ~15:40 ET - `main.ipynb` notebook running. It finishes in 405 seconds
 
-I paused the timer for ~15 minutes for a coffee break :)
+- I paused the timer for ~15 minutes for a coffee break
+
+- ~16:00 ET - Finished running the `main.py` version
 
 ---
 
@@ -88,6 +90,9 @@ The transcript is here: https://chatgpt.com/share/698a4753-08e0-8002-8594-64de9c
 
 Writing this while the notebook runs:
 
-1. I feel uncertain about my inclusion principle for what URLs do or do not correspond to Anthem PPO. Most of my healthcare experience is working with PHI data and internal contracting. If I had more time, I'd re-assess
+1. I lost some time just looking for the best way to handle streaming / chunking JSON. I've worked with chunked hdf5, pointcloud, csv, psql data before, but just not JSON. This was a speedbump!
 
-2. I do feel confident that my general
+2. I feel uncertain about my inclusion principle for what URLs do or do not correspond to Anthem PPO. Most of my healthcare experience is working with PHI data and internal contracting. If I had more time, I'd re-assess how I do this, and how I filter out NY-only PPOs. If I were doing this alongside a team, I'd spend some time discussing the solution ahead of time.
+
+3. I do feel confident that my general approach is extendable and performant. (Stream JSON, no assumption that it's tabular, maintain a `set` stripping queryparams to avoid dupes and a `list` maintaining them). 
+
